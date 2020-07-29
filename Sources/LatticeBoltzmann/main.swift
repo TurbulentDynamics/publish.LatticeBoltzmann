@@ -20,6 +20,7 @@ struct NiallOBroin: Website {
     var description = "Some Photos and Words from Niall Ó Broin"
     var language: Language { .english }
     var imagePath: Path? { nil }
+    
 //    var socialMediaLinks: [SocialMediaLink] { [.location, .email, .linkedIn, .github, .twitter] }
 }
 private extension Node where Context == HTML.BodyContext {
@@ -41,6 +42,21 @@ private extension Node where Context == HTML.BodyContext {
             }
         )
     }//itemList
+    static func footer<T: Website>(for site: T) -> Node {
+        return .footer(
+            .p(
+                .text("Generated using "),
+                .a(
+                    .text("Publish"),
+                    .href("https://github.com/johnsundell/publish")
+                )
+            ),
+            .p(.a(
+                .text("RSS feed"),
+                .href("/feed.rss")
+            ))
+        )
+    }
 }//ext
 struct MyHtmlFactory<Site: Website>: HTMLFactory{
     func makeIndexHTML(for index: Index,
@@ -92,7 +108,8 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                             )
                         }
                     )//ul
-                )//wrapper
+                ),//wrapper
+                .footer(for: context.site)
             )//body
             
         )//html
@@ -101,6 +118,7 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
     func makeSectionHTML(for section: Section<Site>,
                          context: PublishingContext<Site>) throws -> HTML {
         HTML( .head(for: section, on: context.site)
+//              .footer(for: context.site)
         )
     }
     
@@ -139,7 +157,8 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
 //                        .h1(item.title),
                         .contentBody(item.body)
                     )
-                )
+                ),
+                .footer(for: context.site)
             )
             
         )
@@ -170,8 +189,8 @@ extension Theme{
     }
 }
 // This will generate your website using the built-in Foundation theme:
-try NiallOBroin().publish(withTheme: .myTheme)
-
-
+try NiallOBroin().publish(withTheme: .myTheme,additionalSteps: [
+    .deploy(using: .gitHub("uzmanqamar.github.io/publish.LatticeBoltzmann/"))]
 // deployedUsing: .gitHub("TurbulentDynamics/LatticeBoltzmann.github.io.publish")
 
+)
