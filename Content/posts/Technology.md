@@ -4,6 +4,7 @@ description: A description of my first post.
 tags: tech, technology
 ---
 
+# Technology
 
 Developed software for specialised systems using X86 and GPU
 
@@ -16,7 +17,7 @@ Developing Machine Learning techniques in post processing and in situ feature de
 
 
 
-![technology](/assets/images/krull.png)
+![technology](/Images/krull.png)
 
 
 
