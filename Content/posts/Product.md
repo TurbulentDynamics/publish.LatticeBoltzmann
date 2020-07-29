@@ -3,7 +3,7 @@ date: 2020-06-19 21:27
 description: A description of my first post.
 tags: product
 ---
-
+# Product
 * Turbulent Dynamics specialises in large scale simulations over one million core hours
 * Resolve turbulent flow at Kolgomorov scale in some instances
 * Large Eddy Simulation where DNS not possible
@@ -15,6 +15,6 @@ tags: product
  
 
 
-![Product](/assets/images/sail.png)
+![Product](/Images/sail.png)
 
 

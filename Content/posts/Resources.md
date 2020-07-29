@@ -1,9 +1,9 @@
 ---
-date: 2020-06-19 21:27
+date: 2017-06-19 21:27
 description: A description of my first post.
 tags: resources
 ---
-
+# Resources
 ## Some useful references 
 * [Scholaropedia LBM Sauro Succi et al. (2010)](https://www.scholarpedia.org/article/Lattice_Boltzmann_Method)
 * [Wikipedia entry](https://en.wikipedia.org/wiki/Lattice_Boltzmann_methods)
