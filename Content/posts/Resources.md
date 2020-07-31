@@ -1,10 +1,10 @@
 ---
 date: 2017-06-19 21:27
-description: A description of my first post.
+description: Resources.
 tags: resources
 ---
 # Resources
-## Some useful references 
+
 * [Scholaropedia LBM Sauro Succi et al. (2010)](https://www.scholarpedia.org/article/Lattice_Boltzmann_Method)
 * [Wikipedia entry](https://en.wikipedia.org/wiki/Lattice_Boltzmann_methods)
 * [Comparison of different propagation steps for lattice Boltzmann methods](https://www.sciencedirect.com/science/article/pii/S0898122112003835)

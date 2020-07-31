@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
@@ -199,7 +199,7 @@ li.non-listing{
 }
 
 
-@media(max-width: 600px) {
+@media(max-width: 800px) {
     .wrapper {
         padding: 40px 20px;
     }
