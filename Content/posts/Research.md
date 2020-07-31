@@ -6,7 +6,6 @@ tags: research
 
 # Research
 
-![Image of an impeller](/images/banner-axis-nx3000.jpg)
 
 
 Turbulent Dynamics is committed to improving turbulence understanding and has active programs in:
@@ -19,6 +18,7 @@ Turbulent Dynamics is committed to improving turbulence understanding and has ac
 * Tidal flows
 
 
+![Image of an impeller](/Images/banner-axis-nx3000.jpg)
 
 
 

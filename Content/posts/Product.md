@@ -12,6 +12,6 @@ tags: product
 
 
 
-![Product](/images/sail.png)
+![Product](/Images/sail.png)
 
 

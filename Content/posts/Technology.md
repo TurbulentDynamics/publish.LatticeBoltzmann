@@ -13,7 +13,7 @@ tags: tech, technology
 
 
 
-![technology](/images/Krull.png)
+![technology](/Images/Krull.png)
 
 
 

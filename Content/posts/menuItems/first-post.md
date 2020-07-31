@@ -5,7 +5,6 @@ tags: index
 typora-copy-images-to: ../../Resources/Images
 typora-root-url: ../../Resources
 ---
-![Turbulent Dynamics Logo](/images/td-logo.png)
 
 ## Turbulent Dynamics Lattice Boltzmann
 
@@ -14,3 +13,6 @@ typora-root-url: ../../Resources
 * Targeting simulations larger than a thousand cores and a million core-hours                   
 * In-house hardware delivering up to 60% reduction in costs for large scale simulations
 * Algorithm and HPC development
+
+
+![Turbulent Dynamics Logo](/Images/td-logo.png)
