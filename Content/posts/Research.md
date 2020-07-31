@@ -5,9 +5,9 @@ tags: research
 ---
 
 # Reasearch
+
 ![Image of an impeller](/Images/banner-axis-nx3000.jpg)
 
-#    
 
 Turbulent Dynamics is committed to improving turbulence understanding and has active programs in:
 

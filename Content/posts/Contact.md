@@ -1,6 +1,6 @@
 ---
 date: 2016-06-19 21:27
-description: A description of my first post.
+description: Contact
 tags: index
 typora-copy-images-to: ../../Resources/Images
 typora-root-url: ../../Resources

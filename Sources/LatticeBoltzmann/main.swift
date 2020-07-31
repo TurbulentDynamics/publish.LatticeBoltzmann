@@ -3,7 +3,7 @@ import Publish
 import Plot
 
 // This type acts as the configuration for your website.
-struct NiallOBroin: Website {
+struct LatticeBoltzmann: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case posts
@@ -15,9 +15,9 @@ struct NiallOBroin: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://LatticeBoltzmann.com")!
-    var title = "LatticeBoltzmann.github.io"
-    var name = "Lattice Boltzmann"
-    var description = "Some Photos and Words from Niall Ó Broin"
+    var title = "Turbulent Dynamics Lattice Boltzmann"
+    var name = "Turbulent Dynamics Lattice Boltzmann"
+    var description = "Turbulent Dynamics Lattice Boltzmann"
     var language: Language { .english }
     var imagePath: Path? { nil }
     
@@ -80,9 +80,6 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                                             .a(.href(item.path),
                                                .text(item.title))
                                             )))
-                                    
-                                    
-                                    
                                 }
                             )
                         )
@@ -101,9 +98,8 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                                 .article(
                                     //                                    .h1(.text(item.title)),
                                     //                                    .p(.text(item.description)),
-                                    
                                     .contentBody(item.body)
-                                )//artical
+                                )//article
                             )//li
                             )
                         }
@@ -125,7 +121,6 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
     func makeItemHTML(for item: Item<Site>,
                       context: PublishingContext<Site>) throws -> HTML {
          let items = context.allItems(sortedBy: \.date, order: .descending)
-//        let items = context.allItems(sortedBy: \.date, order: .descending)
         
        return HTML( .head(for: item, on: context.site),
             .body(
@@ -138,9 +133,7 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                                .text(context.site.name)),
                             
                             .ul(
-                                
-                                //                                                    .id("menuItems"),
-                                .forEach(items) { item in
+                                                .forEach(items) { item in
                                     .if(item.title != "first-post",
                                         .li(.article(
                                             .a(.href(item.path),
@@ -189,8 +182,6 @@ extension Theme{
     }
 }
 // This will generate your website using the built-in Foundation theme:
-try NiallOBroin().publish(withTheme: .myTheme,additionalSteps: [
-    .deploy(using: .gitHub("uzmanqamar.github.io/publish.LatticeBoltzmann/"))]
-// deployedUsing: .gitHub("TurbulentDynamics/LatticeBoltzmann.github.io.publish")
-
+try LatticeBoltzmann().publish(withTheme: .myTheme, additionalSteps: [
+    .deploy(using: .gitHub("Lattice-Boltzmann/Lattice-Boltzmann.github.io"))]
 )
