@@ -1,6 +1,6 @@
 ---
 date: 2020-06-19 21:27
-description: A description of my first post.
+description: Technology.
 tags: tech, technology
 ---
 
@@ -13,8 +13,7 @@ tags: tech, technology
 
 
 
-
-![technology](/Images/krull.png)
+![technology](/images/Krull.png)
 
 
 

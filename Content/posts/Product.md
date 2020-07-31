@@ -1,6 +1,6 @@
 ---
 date: 2020-06-19 21:27
-description: A description of my first post.
+description: Product.
 tags: product
 ---
 # Product
@@ -12,6 +12,6 @@ tags: product
 
 
 
-![Product](/Images/sail.png)
+![Product](/images/sail.png)
 
 

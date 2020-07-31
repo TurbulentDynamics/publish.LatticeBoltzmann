@@ -20,14 +20,14 @@ struct LatticeBoltzmann: Website {
     var description = "Turbulent Dynamics Lattice Boltzmann"
     var language: Language { .english }
     var imagePath: Path? { nil }
-    
+
 //    var socialMediaLinks: [SocialMediaLink] { [.location, .email, .linkedIn, .github, .twitter] }
 }
 private extension Node where Context == HTML.BodyContext {
     static func wrapper(_ nodes: Node...) -> Node {
         .div(.class("wrapper"), .group(nodes))
     }//wrapper
-    
+
     static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .ul(
             .class("item-list"),
@@ -58,24 +58,24 @@ private extension Node where Context == HTML.BodyContext {
         )
     }
 }//ext
-struct MyHtmlFactory<Site: Website>: HTMLFactory{
+struct MyHtmlFactory<Site: Website>: HTMLFactory {
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
         let items = context.allItems(sortedBy: \.date, order: .descending)
-        return HTML( .head(for: index, on: context.site),//head
+        return HTML( .head(for: index, on: context.site), //head
             .body(
                 .header(
                     .wrapper(
                         .nav(
                             .class("website-name"),
                             .a(.href("/"),
-                               
+
                                .text(context.site.name)),
-                            
+
                             .ul(
                                 .forEach(items) { item in
                                     .if(item.title != "first-post" && item.title != "Research",
-                                        
+
                                         .li(.article(
                                             .a(.href(item.path),
                                                .text(item.title))
@@ -91,7 +91,7 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                         .class("listing"),
                         .forEach(
                             context.allItems(sortedBy: \.date, order: .descending)
-                        ){ item in
+                        ) { item in
                             .if(item.title == "first-post",
                             .li(
                                 .class("non-listing"),
@@ -104,24 +104,24 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                             )
                         }
                     )//ul
-                ),//wrapper
+                ), //wrapper
                 .footer(for: context.site)
             )//body
-            
+
         )//html
     }
-    
+
     func makeSectionHTML(for section: Section<Site>,
                          context: PublishingContext<Site>) throws -> HTML {
         HTML( .head(for: section, on: context.site)
 //              .footer(for: context.site)
         )
     }
-    
+
     func makeItemHTML(for item: Item<Site>,
                       context: PublishingContext<Site>) throws -> HTML {
          let items = context.allItems(sortedBy: \.date, order: .descending)
-        
+
        return HTML( .head(for: item, on: context.site),
             .body(
                 .header(
@@ -129,9 +129,9 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                         .nav(
                             .class("website-name"),
                             .a(.href("/"),
-                               
+
                                .text(context.site.name)),
-                            
+
                             .ul(
                                                 .forEach(items) { item in
                                     .if(item.title != "first-post",
@@ -153,35 +153,37 @@ struct MyHtmlFactory<Site: Website>: HTMLFactory{
                 ),
                 .footer(for: context.site)
             )
-            
+
         )
-        
+
     }
-    
+
     func makePageHTML(for page: Page,
                       context: PublishingContext<Site>) throws -> HTML {
         try makeIndexHTML(for: context.index, context: context)
     }
-    
+
     func makeTagListHTML(for page: TagListPage,
                          context: PublishingContext<Site>) throws -> HTML? {
         nil
     }
-    
+
     func makeTagDetailsHTML(for page: TagDetailsPage,
                             context: PublishingContext<Site>) throws -> HTML? {
         nil
     }
 }
-extension Theme{
-    static var myTheme :Theme{
+extension Theme {
+    static var myTheme: Theme {
         Theme(
             htmlFactory: MyHtmlFactory(),
-            resourcePaths: ["Resources/MyTheme/styles.css"]
+            resourcePaths: ["Resources/theme/styles.css"]
         )
     }
 }
 // This will generate your website using the built-in Foundation theme:
-try LatticeBoltzmann().publish(withTheme: .myTheme, additionalSteps: [
+try LatticeBoltzmann().publish(withTheme: .myTheme,
+                               additionalSteps: [
+                                
     .deploy(using: .gitHub("Lattice-Boltzmann/Lattice-Boltzmann.github.io"))]
 )

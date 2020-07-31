@@ -1,6 +1,6 @@
 ---
 date: 2017-06-19 21:27
-description: A description of my first post.
+description: Resources.
 tags: resources
 ---
 # Resources

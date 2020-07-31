@@ -1,14 +1,16 @@
 ---
 date: 2020-06-19 21:27
-description: A description of my first post.
+description: Turbulent Dynamics Lattice Boltzmann.
 tags: index
 typora-copy-images-to: ../../Resources/Images
 typora-root-url: ../../Resources
 ---
-![Turbulent Dyanmics Logo](/Images/td-logo.png)
+![Turbulent Dynamics Logo](/images/td-logo.png)
+
+## Turbulent Dynamics Lattice Boltzmann
 
 * Turbulent Dynamics is developing high resolution CFD codes with Lattice Boltzmann
-* Develops bespoke applications to input geometry and post-processing                                                      
-* Targeting simulations larger than a thousand cores and a million core-hours                                                                                                         
-* In-house hardware delivering up to 60% reduction in costs for large scale simulations                                                                                        
-* Algorithm and HPC development                                                                                                                                       
+* Bespoke applications to input geometry and post-processing                                                      
+* Targeting simulations larger than a thousand cores and a million core-hours                   
+* In-house hardware delivering up to 60% reduction in costs for large scale simulations
+* Algorithm and HPC development

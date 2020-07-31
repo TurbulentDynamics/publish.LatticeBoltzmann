@@ -2,13 +2,13 @@
 date: 2016-06-19 21:27
 description: Contact
 tags: index
-typora-copy-images-to: ../../Resources/Images
+typora-copy-images-to: ../../Resources/images
 typora-root-url: ../../Resources
 ---
 
 # Contact
 
-  <form action="https://formspree.io/nobyrnes@icloud.com" method="POST">
+  <form action="https://formspree.io/contact@turbulentdynamics.com" method="POST">
 <div style="background-color:lightgray;text-align:center; width:100%;height:450px">
 <br><br>
      <input  type="text" placeholder="Your name" name="name" style="width:70%;height:40px"><br><br>

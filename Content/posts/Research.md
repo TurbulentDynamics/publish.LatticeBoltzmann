@@ -1,12 +1,12 @@
 ---
 date: 2018-06-19 21:27
-description: A description of my first post.
+description: Research.
 tags: research
 ---
 
-# Reasearch
+# Research
 
-![Image of an impeller](/Images/banner-axis-nx3000.jpg)
+![Image of an impeller](/images/banner-axis-nx3000.jpg)
 
 
 Turbulent Dynamics is committed to improving turbulence understanding and has active programs in:
